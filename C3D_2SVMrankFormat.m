@@ -18,6 +18,14 @@ train_feature3=dlmread('/home/lci/workspace/CVPR2017/rankSVM_refined_c3d/camera3
 
 [N1,d1]=size(train_feature1);
 
+fileID1 = fopen('/home/lci/workspace/CVPR2017/rankSVM_refined_c3d/train_rank.txt','w');    
+for i=1:N1
+    new_rank(i,:)=floor(tiedrank(new_label(i,:)));
+end
+
+
+
+if 0
 fileID = fopen('/home/lci/workspace/CVPR2017/rankSVM_refined_c3d/all_train_features.txt','w');
 for i=1:N1
     i
@@ -44,4 +52,7 @@ for i=1:N1
         end
     end
     fprintf(fileID,'\n');
+end
+
+fclose(fileID); 
 end
