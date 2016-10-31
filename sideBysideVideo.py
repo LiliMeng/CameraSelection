@@ -5,6 +5,8 @@ Created on Tue Sep 20 16:25:42 2016
 @author: jimmy
 
 play video
+
+ python sideBysideVideo.py --file1 refined_c3d_pred.csv --file2 camera_selection_prof_test.csv --start_frame 158400 --end_frame 162000 --play_step 2 --fps 60 --gap 10 --overlay_box_size 5 --is_half_size 1 --save_folder compareVideo 
 """
 
 import numpy as np
